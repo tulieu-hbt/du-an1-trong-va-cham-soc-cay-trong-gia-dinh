@@ -1,6 +1,6 @@
 // Hàm tải dữ liệu từ file JSON
 async function loadExcelData() {
-    const url = 'https://tulieu-hbt.github.io/phan-loai-nong-san/assets/baocao.json';  // Đảm bảo URL đúng
+    const url = 'https://tulieu-hbt.github.io/du-an1-trong-va-cham-soc-cay-trong-gia-dinh/assets/baocao.json';  // Đảm bảo URL đúng
 
     try {
         const response = await fetch(url);
