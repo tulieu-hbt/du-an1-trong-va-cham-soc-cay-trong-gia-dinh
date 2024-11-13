@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ứng Dụng Phân Loại Nông Sản</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script defer src="kehoach.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Ứng Dụng Phân Loại Nông Sản</h1>
+
+    <div class="camera-content">
+      <div class="camera-section">
+        <video id="camera" autoplay playsinline></video>
+      </div>
+      <div class="image-container">
+        <img id="capturedImage" src="" alt="Captured Image">
+      </div>
+    </div>
+
+    <div class="button-container">
+      <button id="captureButton" class="capture-button">Chụp Ảnh và Phân Loại</button>
+    </div>
+
+    <div id="result" class="result-text"></div>
+    <div id="preservationInfo" class="preservation-text"></div>
+
+    <!-- Thêm div để chứa thông tin giới thiệu -->
+    <div id="introductionContainer" class="introduction"></div>
+
+    <div id="plantingPlanContainer" class="planting-plan-container"></div>
+    <div id="marketInfoContainer" class="market-info-container"></div>
+  </div>
+</body>
+</html>

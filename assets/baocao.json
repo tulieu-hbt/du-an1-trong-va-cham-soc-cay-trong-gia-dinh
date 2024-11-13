@@ -1,0 +1,74 @@
+[
+    {
+        "nongsan": "cà chua",
+        "gioiThieu":{
+            "giongCay": "Bạn muốn trồng cà chua ?",
+            "phuongThucTrong": "Trồng trong thùng xốp hoặc chậu lớn",
+            "dienTichSoLuong": "Tùy vào diện tích ban công hoặc sân thượng, bạn chọn số lượng cây phù hợp",
+            "dieuKienSinhTruong": "Cây cà chua cần đất tơi xốp, thoát nước tốt, ánh sáng đầy đủ"
+        },
+        "plantingPlan": [
+            {
+                "STT": "1. Chuẩn bị đất",
+                "Cong Viec Can Lam": "Làm đất tơi xốp, trộn với phân hữu cơ, phân chuồng, tăng dinh dưỡng cho đất.",
+                "Thoi Gian Thuc Hien": "Tháng 1",
+                "Vat Lieu, Dung Cu Can Thiet": "Đất vườn, phân hữu cơ, vôi bột",
+                "Ghi Chu": "Xới đất kỹ trước khi bón phân, phơi đất sau khi xử lý."
+            },
+            {
+                "STT": "2. Chuẩn bị giống",
+                "Cong Viec Can Lam": "Chọn hạt giống chất lượng cao, ngâm hạt giống trong nước ấm khoảng 24 giờ trước khi gieo.",
+                "Thoi Gian Thuc Hien": "Tháng 2",
+                "Vat Lieu, Dung Cu Can Thiet": "Hạt giống cà chua, nước ấm",
+                "Ghi Chu": "Chọn hạt giống đồng đều về kích thước và không bị sâu bệnh."
+            },
+            {
+                "STT": "3. Gieo trồng",
+                "Cong Viec Can Lam": "Gieo hạt vào bầu ươm hoặc khay gieo hạt, giữ ẩm cho đất.",
+                "Thoi Gian Thuc Hien": "Tháng 2",
+                "Vat Lieu, Dung Cu Can Thiet": "Hạt giống cà chua, bầu ươm, khay gieo hạt",
+                "Ghi Chu": "Đảm bảo khoảng cách gieo hạt phù hợp để cây có đủ không gian phát triển."
+            },
+            {
+                "STT": "4. Chăm sóc",
+                "Cong Viec Can Lam": "Tưới nước đều đặn, bón phân lần 1 vào gốc cây. Kiểm tra và loại bỏ cỏ dại, sâu bệnh.",
+                "Thoi Gian Thuc Hien": "Tháng 3 và thường xuyên",
+                "Vat Lieu, Dung Cu Can Thiet": "Phân bón NPK, nước tưới, thuốc trừ sâu",
+                "Ghi Chu": "Bón phân cách gốc 5cm, tưới nước vào buổi sáng hoặc chiều."
+            },
+            {
+                "STT": "5. Thu hoạch",
+                "Cong Viec Can Lam": "Thu hoạch khi quả cà chua chín đỏ.",
+                "Thoi Gian Thuc Hien": "Tháng 6",
+                "Vat Lieu, Dung Cu Can Thiet": "Dao, kéo",
+                "Ghi Chu": "Thu hoạch vào buổi sáng hoặc chiều để đảm bảo chất lượng quả."
+            }
+        ],
+        "costEstimate": [
+            {
+                "STT": 1,
+                "Cac Loai Chi Phi": "Giống cà chua",
+                "Don Vi Tinh": "gói",
+                "Don Gia (dong)": 20000,
+                "So Luong": 2,
+                "Ghi Chu": ""
+            },
+            {
+                "STT": 2,
+                "Cac Loai Chi Phi": "Phân hữu cơ",
+                "Don Vi Tinh": "kg",
+                "Don Gia (dong)": 3000,
+                "So Luong": 30,
+                "Ghi Chu": ""
+            },
+            {
+                "STT": 3,
+                "Cac Loai Chi Phi": "Phân NPK",
+                "Don Vi Tinh": "kg",
+                "Don Gia (dong)": 8000,
+                "So Luong": 10,
+                "Ghi Chu": ""
+            }
+        ]
+    }
+]
