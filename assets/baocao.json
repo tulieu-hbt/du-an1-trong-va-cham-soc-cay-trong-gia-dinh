@@ -2,46 +2,46 @@
     {
         "nongsan": "cà chua",
         "gioiThieu": {
-            "giongCay": "Bạn muốn trồng cà chua?",
-            "phuongThucTrong": "Trồng trong thùng xốp hoặc chậu lớn.",
-            "dienTichSoLuong": "Phù hợp với diện tích ban công hoặc sân thượng thành thị.",
-            "dieuKienSinhTruong": "Cây cà chua cần đất tơi xốp, thoát nước tốt, ánh sáng đầy đủ."
+            "giongCay": "Bạn muốn trồng cà chua trên ban công hoặc sân thượng?",
+            "phuongThucTrong": "Trồng trong thùng xốp, chậu lớn hoặc tái chế từ vỏ chai nhựa, đặt nơi có nhiều ánh sáng.",
+            "dienTichSoLuong": "Phù hợp với diện tích nhỏ như ban công hoặc sân thượng thành thị.",
+            "dieuKienSinhTruong": "Cây cà chua cần đất tơi xốp, thoát nước tốt, ánh sáng đầy đủ và phải được tưới nước đều."
         },
         "plantingPlan": [
             {
                 "STT": "1. Chuẩn bị đất",
-                "CongViecCanLam": "Làm đất tơi xốp, trộn với phân hữu cơ, phân chuồng.",
+                "CongViecCanLam": "Làm đất tơi xốp, trộn phân hữu cơ hoặc phân chuồng để tăng dinh dưỡng cho đất.",
                 "ThoiGianThucHien": "Tháng 1",
-                "VatLieuDungCuCanThiet": "Đất vườn, phân hữu cơ, vôi bột.",
-                "GhiChu": "Xới đất kỹ trước khi bón phân, phơi đất sau khi xử lý."
+                "VatLieuDungCuCanThiet": "Đất vườn, phân hữu cơ, phân chuồng, vôi bột.",
+                "GhiChu": "Xới đất kỹ và phơi đất sau khi xử lý để hạn chế nấm bệnh."
             },
             {
                 "STT": "2. Chuẩn bị giống",
-                "CongViecCanLam": "Chọn hạt giống chất lượng cao, ngâm trong nước ấm trước khi gieo.",
+                "CongViecCanLam": "Chọn hạt giống cà chua chất lượng cao, ngâm hạt giống trong nước ấm 24 giờ trước khi gieo.",
                 "ThoiGianThucHien": "Tháng 2",
                 "VatLieuDungCuCanThiet": "Hạt giống cà chua, nước ấm.",
-                "GhiChu": "Chọn hạt giống đồng đều về kích thước, không bị sâu bệnh."
+                "GhiChu": "Chọn hạt giống đồng đều, không bị sâu bệnh để cây phát triển tốt."
             },
             {
                 "STT": "3. Gieo trồng",
-                "CongViecCanLam": "Gieo hạt vào bầu ươm hoặc khay gieo hạt.",
+                "CongViecCanLam": "Gieo hạt vào bầu ươm hoặc khay, giữ ẩm cho đất. Đặt chậu ở nơi có ánh sáng.",
                 "ThoiGianThucHien": "Tháng 2",
                 "VatLieuDungCuCanThiet": "Hạt giống cà chua, bầu ươm, khay gieo hạt.",
-                "GhiChu": "Giữ ẩm cho đất để cây phát triển tốt."
+                "GhiChu": "Đảm bảo khoảng cách gieo hạt phù hợp để cây có không gian phát triển."
             },
             {
                 "STT": "4. Chăm sóc",
-                "CongViecCanLam": "Tưới nước đều đặn, bón phân, kiểm tra cỏ dại, sâu bệnh.",
+                "CongViecCanLam": "Tưới nước đều đặn, bón phân NPK. Kiểm tra sâu bệnh và loại bỏ cỏ dại.",
                 "ThoiGianThucHien": "Tháng 3 và thường xuyên",
-                "VatLieuDungCuCanThiet": "Phân bón NPK, nước tưới, thuốc trừ sâu.",
-                "GhiChu": "Bón phân cách gốc 5cm, tưới vào buổi sáng hoặc chiều."
+                "VatLieuDungCuCanThiet": "Phân bón NPK, nước tưới, thuốc trừ sâu nếu cần.",
+                "GhiChu": "Bón phân cách gốc cây khoảng 5cm, tưới nước vào buổi sáng hoặc chiều để tránh nấm mốc."
             },
             {
                 "STT": "5. Thu hoạch",
-                "CongViecCanLam": "Thu hoạch khi quả cà chua chín đỏ.",
+                "CongViecCanLam": "Thu hoạch khi quả cà chua chuyển sang màu đỏ rực.",
                 "ThoiGianThucHien": "Tháng 6",
                 "VatLieuDungCuCanThiet": "Dao, kéo.",
-                "GhiChu": "Thu hoạch vào buổi sáng hoặc chiều."
+                "GhiChu": "Thu hoạch vào buổi sáng hoặc chiều để đảm bảo độ tươi ngon của quả."
             }
         ],
         "costEstimate": [
@@ -74,53 +74,53 @@
     {
         "nongsan": "trái bầu",
         "gioiThieu": {
-            "giongCay": "Trái bầu thích hợp cho không gian có giàn leo.",
-            "phuongThucTrong": "Trồng trong thùng xốp hoặc chậu, làm giàn leo bằng tre, nứa hoặc tầm vông (dài 2-3m).",
-            "dienTichSoLuong": "Trồng tốt trên ban công hoặc sân thượng thành thị.",
-            "dieuKienSinhTruong": "Cây bầu cần ánh sáng tốt, đất tơi xốp và tưới nước đều."
+            "giongCay": "Trái bầu phát triển tốt ở nơi có giàn leo và không gian mở.",
+            "phuongThucTrong": "Trồng trong thùng xốp hoặc chậu lớn, làm giàn leo bằng tre, nứa hoặc tầm vông có chiều dài từ 2-3m.",
+            "dienTichSoLuong": "Phù hợp với diện tích sân thượng hoặc ban công rộng.",
+            "dieuKienSinhTruong": "Bầu cần ánh sáng tốt, đất tơi xốp và tưới nước đều đặn."
         },
         "plantingPlan": [
             {
                 "STT": "1. Chuẩn bị đất",
-                "CongViecCanLam": "Trộn đất với phân chuồng và phân hữu cơ.",
+                "CongViecCanLam": "Trộn đất với phân chuồng và phân hữu cơ để tăng độ tơi xốp và dưỡng chất.",
                 "ThoiGianThucHien": "Tháng 1",
                 "VatLieuDungCuCanThiet": "Đất trồng, phân chuồng, phân hữu cơ.",
                 "GhiChu": "Phơi đất trước khi trồng để hạn chế nấm bệnh."
             },
             {
                 "STT": "2. Chuẩn bị giống",
-                "CongViecCanLam": "Chọn giống chất lượng, ngâm hạt giống 24 giờ.",
+                "CongViecCanLam": "Chọn giống chất lượng, ngâm hạt trong nước ấm khoảng 24 giờ để kích thích nảy mầm.",
                 "ThoiGianThucHien": "Tháng 2",
                 "VatLieuDungCuCanThiet": "Hạt giống bầu, nước ấm.",
                 "GhiChu": "Ngâm hạt giúp nảy mầm nhanh hơn."
             },
             {
                 "STT": "3. Gieo trồng",
-                "CongViecCanLam": "Gieo hạt trực tiếp vào chậu, giữ ẩm cho đất.",
+                "CongViecCanLam": "Gieo hạt trực tiếp vào chậu hoặc thùng xốp và giữ ẩm cho đất.",
                 "ThoiGianThucHien": "Tháng 2",
-                "VatLieuDungCuCanThiet": "Hạt giống, chậu lớn.",
-                "GhiChu": "Đặt cây gần giàn leo."
+                "VatLieuDungCuCanThiet": "Hạt giống, chậu hoặc thùng xốp lớn.",
+                "GhiChu": "Đặt cây gần giàn leo để cây phát triển thẳng."
             },
             {
                 "STT": "4. Làm giàn",
-                "CongViecCanLam": "Làm giàn leo cho cây bằng tre hoặc nứa dài 2-3m.",
+                "CongViecCanLam": "Làm giàn leo cho cây bằng tre hoặc nứa có chiều dài từ 2-3m.",
                 "ThoiGianThucHien": "Tháng 3",
-                "VatLieuDungCuCanThiet": "Tre, nứa, tầm vông.",
-                "GhiChu": "Đảm bảo giàn chắc chắn để cây leo tốt."
+                "VatLieuDungCuCanThiet": "Tre, nứa, hoặc tầm vông.",
+                "GhiChu": "Giàn cần chắc chắn để hỗ trợ cây leo và đỡ trái."
             },
             {
                 "STT": "5. Chăm sóc",
-                "CongViecCanLam": "Tưới nước đều, bón phân, kiểm tra sâu bệnh.",
+                "CongViecCanLam": "Tưới nước đều, bón phân, loại bỏ cỏ dại và kiểm tra sâu bệnh.",
                 "ThoiGianThucHien": "Tháng 3 và thường xuyên",
-                "VatLieuDungCuCanThiet": "Nước tưới, phân bón, thuốc trừ sâu.",
-                "GhiChu": "Tưới nước vào buổi sáng hoặc chiều."
+                "VatLieuDungCuCanThiet": "Phân bón NPK, nước tưới, thuốc trừ sâu.",
+                "GhiChu": "Tưới nước vào buổi sáng hoặc chiều để hạn chế nấm bệnh."
             },
             {
                 "STT": "6. Thu hoạch",
-                "CongViecCanLam": "Thu hoạch khi trái bầu đạt kích thước mong muốn.",
+                "CongViecCanLam": "Thu hoạch khi trái bầu đạt kích thước mong muốn và còn xanh non.",
                 "ThoiGianThucHien": "Tháng 5",
                 "VatLieuDungCuCanThiet": "Dao, kéo.",
-                "GhiChu": "Thu hoạch khi bầu còn xanh non."
+                "GhiChu": "Thu hoạch vào buổi sáng hoặc chiều."
             }
         ],
         "costEstimate": [
@@ -146,17 +146,17 @@
                 "DonViTinh": "m",
                 "DonGiaDong": 10000,
                 "SoLuong": 10,
-                "GhiChu": "Tre, nứa, hoặc tầm vông."
+                "GhiChu": "Tre, nứa, hoặc tầm vông dài khoảng 2-3m."
             }
         ]
     },
     {
         "nongsan": "dưa leo",
         "gioiThieu": {
-            "giongCay": "Dưa leo thích hợp trồng trên ban công hoặc sân thượng.",
-            "phuongThucTrong": "Trồng trong chậu lớn, cần giàn leo hoặc cọc chống.",
-            "dienTichSoLuong": "Phù hợp trồng ở các không gian nhỏ như ban công.",
-            "dieuKienSinhTruong": "Cần ánh sáng, đất thoát nước tốt và ẩm."
+            "giongCay": "Dưa leo thích hợp trồng trong không gian nhỏ với giàn leo.",
+            "phuongThucTrong": "Trồng trong thùng xốp, chậu tái chế từ chai nhựa, cần giàn leo hoặc cọc chống.",
+            "dienTichSoLuong": "Thích hợp trồng trên ban công hoặc sân thượng.",
+            "dieuKienSinhTruong": "Dưa leo cần ánh sáng, đất thoát nước tốt và giữ độ ẩm đều."
         },
         "plantingPlan": [
             {
@@ -164,42 +164,42 @@
                 "CongViecCanLam": "Làm đất tơi xốp, trộn phân hữu cơ và vôi bột.",
                 "ThoiGianThucHien": "Tháng 1",
                 "VatLieuDungCuCanThiet": "Đất trồng, phân hữu cơ, vôi bột.",
-                "GhiChu": "Đảm bảo đất tơi xốp để cây phát triển tốt."
+                "GhiChu": "Đảm bảo đất tơi xốp và sạch bệnh."
             },
             {
                 "STT": "2. Chuẩn bị giống",
-                "CongViecCanLam": "Chọn hạt giống chất lượng, ngâm hạt trong nước ấm.",
+                "CongViecCanLam": "Chọn hạt giống chất lượng cao, ngâm hạt trong nước ấm khoảng 24 giờ.",
                 "ThoiGianThucHien": "Tháng 2",
                 "VatLieuDungCuCanThiet": "Hạt giống dưa leo, nước ấm.",
-                "GhiChu": "Giúp hạt giống nảy mầm nhanh."
+                "GhiChu": "Ngâm hạt giúp kích thích nảy mầm nhanh hơn."
             },
             {
                 "STT": "3. Gieo trồng",
-                "CongViecCanLam": "Gieo hạt vào chậu hoặc thùng xốp.",
+                "CongViecCanLam": "Gieo hạt vào chậu lớn hoặc thùng xốp đã chuẩn bị.",
                 "ThoiGianThucHien": "Tháng 2",
-                "VatLieuDungCuCanThiet": "Hạt giống, chậu hoặc thùng xốp.",
-                "GhiChu": "Đặt cây gần giàn leo để cây phát triển thẳng."
+                "VatLieuDungCuCanThiet": "Hạt giống, chậu lớn hoặc thùng xốp.",
+                "GhiChu": "Đảm bảo khoảng cách giữa các cây đủ để cây phát triển."
             },
             {
                 "STT": "4. Làm giàn",
-                "CongViecCanLam": "Làm giàn bằng tre hoặc tầm vông dài khoảng 2m.",
+                "CongViecCanLam": "Làm giàn bằng tre hoặc nứa có chiều dài khoảng 2m.",
                 "ThoiGianThucHien": "Tháng 3",
-                "VatLieuDungCuCanThiet": "Tre, tầm vông.",
-                "GhiChu": "Giàn chắc chắn giúp cây phát triển tốt."
+                "VatLieuDungCuCanThiet": "Tre, nứa, tầm vông.",
+                "GhiChu": "Giàn cần chắc chắn để cây leo và phát triển tốt."
             },
             {
                 "STT": "5. Chăm sóc",
-                "CongViecCanLam": "Tưới nước đều đặn, bón phân NPK.",
+                "CongViecCanLam": "Tưới nước đều đặn, bón phân NPK, loại bỏ sâu bệnh.",
                 "ThoiGianThucHien": "Tháng 3 và thường xuyên",
                 "VatLieuDungCuCanThiet": "Phân bón NPK, nước tưới.",
                 "GhiChu": "Bón phân cách gốc để tránh làm cháy cây."
             },
             {
                 "STT": "6. Thu hoạch",
-                "CongViecCanLam": "Thu hoạch khi quả dưa leo đạt kích thước mong muốn.",
+                "CongViecCanLam": "Thu hoạch khi quả dưa leo còn xanh và đạt kích thước mong muốn.",
                 "ThoiGianThucHien": "Tháng 4",
                 "VatLieuDungCuCanThiet": "Dao, kéo.",
-                "GhiChu": "Thu hoạch khi quả dưa leo còn tươi non."
+                "GhiChu": "Thu hoạch khi quả dưa leo còn tươi non, vào sáng hoặc chiều."
             }
         ],
         "costEstimate": [
@@ -225,8 +225,273 @@
                 "DonViTinh": "m",
                 "DonGiaDong": 10000,
                 "SoLuong": 5,
-                "GhiChu": "Tre, nứa, tầm vông."
+                "GhiChu": "Tre, nứa, tầm vông dài khoảng 2m."
             }
         ]
     }
+        {
+        "nongsan": "hành lá",
+        "gioiThieu": {
+            "giongCay": "Hành lá là loại rau gia vị phổ biến, dễ trồng tại nhà.",
+            "phuongThucTrong": "Trồng trong chậu nhỏ, thùng xốp, hoặc chai nhựa tái chế.",
+            "dienTichSoLuong": "Phù hợp trồng trong diện tích nhỏ như ban công hoặc bậu cửa sổ.",
+            "dieuKienSinhTruong": "Hành lá ưa đất tơi xốp, thoát nước tốt, và ánh sáng nhẹ."
+        },
+        "plantingPlan": [
+            {
+                "STT": "1. Chuẩn bị đất",
+                "CongViecCanLam": "Trộn đất tơi xốp với phân hữu cơ, phân chuồng để tăng dinh dưỡng.",
+                "ThoiGianThucHien": "Tháng 1",
+                "VatLieuDungCuCanThiet": "Đất trồng, phân hữu cơ, vôi bột.",
+                "GhiChu": "Đất trồng cần tơi xốp, thoáng khí để hành phát triển."
+            },
+            {
+                "STT": "2. Chuẩn bị giống",
+                "CongViecCanLam": "Chọn củ hành lá có rễ hoặc ngâm hạt giống trong nước ấm 3-4 giờ.",
+                "ThoiGianThucHien": "Tháng 2",
+                "VatLieuDungCuCanThiet": "Củ hành lá hoặc hạt giống, nước ấm.",
+                "GhiChu": "Ngâm hạt giúp hạt nhanh nảy mầm."
+            },
+            {
+                "STT": "3. Gieo trồng",
+                "CongViecCanLam": "Gieo hạt hoặc cắm củ hành vào đất, cách nhau 5-7 cm.",
+                "ThoiGianThucHien": "Tháng 2",
+                "VatLieuDungCuCanThiet": "Hạt giống hoặc củ hành, chậu nhỏ.",
+                "GhiChu": "Giữ đất ẩm nhẹ để hành mọc mầm nhanh."
+            },
+            {
+                "STT": "4. Chăm sóc",
+                "CongViecCanLam": "Tưới nước nhẹ đều đặn, nhổ cỏ, kiểm tra sâu bệnh.",
+                "ThoiGianThucHien": "Thường xuyên",
+                "VatLieuDungCuCanThiet": "Nước tưới.",
+                "GhiChu": "Tưới nước nhẹ vào buổi sáng hoặc chiều để cây xanh tốt."
+            },
+            {
+                "STT": "5. Thu hoạch",
+                "CongViecCanLam": "Thu hoạch khi hành lá cao khoảng 15-20 cm.",
+                "ThoiGianThucHien": "Khoảng 30-45 ngày sau khi gieo.",
+                "VatLieuDungCuCanThiet": "Kéo hoặc dao.",
+                "GhiChu": "Có thể thu hoạch dần khi cần sử dụng."
+            }
+        ],
+        "costEstimate": [
+            {
+                "STT": 1,
+                "CacLoaiChiPhi": "Giống hành lá",
+                "DonViTinh": "củ hoặc gói",
+                "DonGiaDong": 10000,
+                "SoLuong": 1,
+                "GhiChu": ""
+            },
+            {
+                "STT": 2,
+                "CacLoaiChiPhi": "Phân hữu cơ",
+                "DonViTinh": "kg",
+                "DonGiaDong": 3000,
+                "SoLuong": 5,
+                "GhiChu": ""
+            }
+        ]
+    },
+    {
+        "nongsan": "trái mướp",
+        "gioiThieu": {
+            "giongCay": "Mướp là loại cây leo thích hợp cho không gian có giàn.",
+            "phuongThucTrong": "Trồng trong thùng xốp lớn, làm giàn leo bằng tre, nứa hoặc tầm vông dài 2-3m.",
+            "dienTichSoLuong": "Phù hợp với sân thượng hoặc ban công rộng.",
+            "dieuKienSinhTruong": "Mướp cần ánh sáng nhiều, đất tơi xốp, và tưới nước đều."
+        },
+        "plantingPlan": [
+            {
+                "STT": "1. Chuẩn bị đất",
+                "CongViecCanLam": "Trộn đất với phân chuồng và phân hữu cơ.",
+                "ThoiGianThucHien": "Tháng 1",
+                "VatLieuDungCuCanThiet": "Đất trồng, phân chuồng, phân hữu cơ.",
+                "GhiChu": "Đảm bảo đất tơi xốp và giàu dinh dưỡng."
+            },
+            {
+                "STT": "2. Chuẩn bị giống",
+                "CongViecCanLam": "Ngâm hạt giống trong nước ấm 24 giờ để kích thích nảy mầm.",
+                "ThoiGianThucHien": "Tháng 2",
+                "VatLieuDungCuCanThiet": "Hạt giống mướp, nước ấm.",
+                "GhiChu": "Ngâm hạt giúp tăng khả năng nảy mầm."
+            },
+            {
+                "STT": "3. Gieo trồng",
+                "CongViecCanLam": "Gieo hạt vào thùng xốp hoặc chậu lớn, giữ ẩm cho đất.",
+                "ThoiGianThucHien": "Tháng 2",
+                "VatLieuDungCuCanThiet": "Hạt giống, thùng xốp hoặc chậu lớn.",
+                "GhiChu": "Đảm bảo khoảng cách giữa các cây khoảng 20-30 cm."
+            },
+            {
+                "STT": "4. Làm giàn",
+                "CongViecCanLam": "Làm giàn leo cho cây bằng tre, nứa, hoặc tầm vông dài khoảng 2-3m.",
+                "ThoiGianThucHien": "Tháng 3",
+                "VatLieuDungCuCanThiet": "Tre, nứa, tầm vông.",
+                "GhiChu": "Giàn cần chắc chắn để đỡ cây leo và trái nặng."
+            },
+            {
+                "STT": "5. Chăm sóc",
+                "CongViecCanLam": "Tưới nước đều đặn, bón phân, và kiểm tra sâu bệnh.",
+                "ThoiGianThucHien": "Thường xuyên",
+                "VatLieuDungCuCanThiet": "Phân bón NPK, nước tưới.",
+                "GhiChu": "Tưới nước vào buổi sáng hoặc chiều, bón phân mỗi 2-3 tuần."
+            },
+            {
+                "STT": "6. Thu hoạch",
+                "CongViecCanLam": "Thu hoạch khi trái mướp đạt kích thước mong muốn.",
+                "ThoiGianThucHien": "Tháng 5 trở đi",
+                "VatLieuDungCuCanThiet": "Dao, kéo.",
+                "GhiChu": "Thu hoạch khi trái còn non để giữ độ ngon và giòn."
+            }
+        ],
+        "costEstimate": [
+            {
+                "STT": 1,
+                "CacLoaiChiPhi": "Giống mướp",
+                "DonViTinh": "gói",
+                "DonGiaDong": 15000,
+                "SoLuong": 1,
+                "GhiChu": ""
+            },
+            {
+                "STT": 2,
+                "CacLoaiChiPhi": "Phân hữu cơ",
+                "DonViTinh": "kg",
+                "DonGiaDong": 3000,
+                "SoLuong": 15,
+                "GhiChu": ""
+            },
+            {
+                "STT": 3,
+                "CacLoaiChiPhi": "Vật liệu làm giàn",
+                "DonViTinh": "m",
+                "DonGiaDong": 10000,
+                "SoLuong": 10,
+                "GhiChu": "Tre, nứa hoặc tầm vông dài 2-3m."
+            }
+        ]
+    },
+    {
+        "nongsan": "đậu bắp",
+        "gioiThieu": {
+            "giongCay": "Đậu bắp dễ trồng, thích hợp với điều kiện nắng nhiều.",
+            "phuongThucTrong": "Trồng trong thùng xốp, chậu lớn hoặc tái chế từ vỏ chai nhựa cắt.",
+            "dienTichSoLuong": "Thích hợp với không gian nhỏ như ban công hoặc sân thượng.",
+            "dieuKienSinhTruong": "Đậu bắp cần ánh sáng nhiều, đất tơi xốp, và giữ độ ẩm đều."
+        },
+        "plantingPlan": [
+            {
+                "STT": "1. Chuẩn bị đất",
+                "CongViecCanLam": "Làm đất tơi xốp, trộn với phân hữu cơ hoặc phân chuồng.",
+                "ThoiGianThucHien": "Tháng 1",
+                "VatLieuDungCuCanThiet": "Đất trồng, phân hữu cơ, phân chuồng.",
+                "GhiChu": "Đất cần tơi xốp và nhiều dinh dưỡng."
+            },
+            {
+                "STT": "2. Chuẩn bị giống",
+                "CongViecCanLam": "Ngâm hạt đậu bắp trong nước ấm 24 giờ để hạt dễ nảy mầm.",
+                "ThoiGianThucHien": "Tháng 2",
+                "VatLieuDungCuCanThiet": "Hạt giống đậu bắp, nước ấm.",
+                "GhiChu": "Ngâm hạt giúp hạt nảy mầm nhanh."
+            },
+            {
+                "STT": "3. Gieo trồng",
+                "CongViecCanLam": "Gieo hạt vào chậu lớn, khoảng cách giữa các cây 20-30 cm.",
+                "ThoiGianThucHien": "Tháng 2",
+                "VatLieuDungCuCanThiet": "Hạt giống, thùng xốp hoặc chậu lớn.",
+                "GhiChu": "Giữ ẩm đều cho đất để hạt dễ nảy mầm."
+            },
+            {
+                "STT": "4. Chăm sóc",
+                "CongViecCanLam": "Tưới nước đều đặn, bón phân NPK và kiểm tra sâu bệnh.",
+                "ThoiGianThucHien": "Thường xuyên",
+                "VatLieuDungCuCanThiet": "Phân bón NPK, nước tưới.",
+                "GhiChu": "Bón phân mỗi 2 tuần để cây phát triển tốt."
+            },
+            {
+                "STT": "5. Thu hoạch",
+                "CongViecCanLam": "Thu hoạch khi quả đậu bắp dài khoảng 10-15 cm, còn non.",
+                "ThoiGianThucHien": "Khoảng 2-3 tháng sau gieo.",
+                "VatLieuDungCuCanThiet": "Kéo hoặc dao.",
+                "GhiChu": "Thu hoạch thường xuyên để cây ra thêm quả."
+            }
+        ],
+        "costEstimate": [
+            {
+                "STT": 1,
+                "CacLoaiChiPhi": "Giống đậu bắp",
+                "DonViTinh": "gói",
+                "DonGiaDong": 12000,
+                "SoLuong": 1,
+                "GhiChu": ""
+            },
+            {
+                "STT": 2,
+                "CacLoaiChiPhi": "Phân hữu cơ",
+                "DonViTinh": "kg",
+                "DonGiaDong": 3000,
+                "SoLuong": 10,
+                "GhiChu": ""
+            }
+        ]
+    }
+
 ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
