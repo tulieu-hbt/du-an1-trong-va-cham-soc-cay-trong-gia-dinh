@@ -116,11 +116,12 @@ function displayCostEstimate(costEstimate, container) {
 // Hàm tạo dữ liệu giả lập cho giá thị trường (bổ sung dữ liệu)
 function generateMockMarketData(nongsan) {
     const mockPrices = {
-        "chuối": { price: (5000 + Math.random() * 2000).toFixed(0), date: new Date().toLocaleDateString() },
-        "cà chua": { price: (15000 + Math.random() * 3000).toFixed(0), date: new Date().toLocaleDateString() },
-        "thanh long": { price: (20000 + Math.random() * 5000).toFixed(0), date: new Date().toLocaleDateString() },
-        "nho": { price: (10000 + Math.random() * 4000).toFixed(0), date: new Date().toLocaleDateString() },
-        "chanh": { price: (8000 + Math.random() * 2000).toFixed(0), date: new Date().toLocaleDateString() }
+        "cà chua": { price: (5000 + Math.random() * 2000).toFixed(0), date: new Date().toLocaleDateString() },
+        "trái bầu": { price: (15000 + Math.random() * 3000).toFixed(0), date: new Date().toLocaleDateString() },
+        "trái mướp": { price: (20000 + Math.random() * 5000).toFixed(0), date: new Date().toLocaleDateString() },
+        "đậu bắp": { price: (10000 + Math.random() * 4000).toFixed(0), date: new Date().toLocaleDateString() },
+        "dưa leo": { price: (8000 + Math.random() * 2000).toFixed(0), date: new Date().toLocaleDateString() },
+        "hành lá": { price: (8000 + Math.random() * 2000).toFixed(0), date: new Date().toLocaleDateString() }
     };
     return mockPrices[nongsan] || { price: "Không có sẵn", date: new Date().toLocaleDateString() };
 }
