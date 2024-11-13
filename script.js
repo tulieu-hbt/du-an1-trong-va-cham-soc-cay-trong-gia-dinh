@@ -73,7 +73,7 @@ async function predict() {
     const classLabels = ["cà chua","trái bầu","trái mướp","hành lá","dưa leo","đậu bắp"];
     const maxProbability = Math.max(...predictions);
     const predictedClass = classLabels[predictions.indexOf(maxProbability)];
-
+    // Xác xuất nhận diện
     if (maxProbability < 0.7) {
         result.innerText = "Không nhận diện được nông sản.";
         speak("Không nhận diện được nông sản.");
