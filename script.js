@@ -51,10 +51,19 @@ function captureImage() {
 
 // Tải nội dung file JSON
 async function loadPreservationTexts() {
-    const response = await fetch('https://tulieu-hbt.github.io/du-an1-trong-va-cham-soc-cay-trong-gia-dinh/preservationTexts.json'); // Đường dẫn tới file JSON
-    const data = await response.json();
-    return data;
+    try {
+        const response = await fetch('https://tulieu-hbt.github.io/du-an1-trong-va-cham-soc-cay-trong-gia-dinh/preservationTexts.json'); // Đường dẫn tới file JSON
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error("Lỗi khi tải nội dung JSON:", error);
+        return {};
+    }
 }
+
 
 // Dự đoán nông sản
 async function predict() {
