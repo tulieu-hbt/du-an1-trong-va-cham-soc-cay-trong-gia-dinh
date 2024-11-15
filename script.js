@@ -75,13 +75,20 @@ async function predict() {
     const normalizedImage = resizedImage.div(255.0);
     const inputTensor = tf.expandDims(normalizedImage, 0);
 
+    console.log("Input tensor shape: ", inputTensor.shape); // Kiểm tra hình dạng của tensor đầu vào
+
     const predictions = await model.predict(inputTensor).data();
+    console.log("Predictions: ", predictions); // Kiểm tra giá trị của dự đoán
+
     const classLabels = ["cà chua", "trái bầu", "trái mướp", "hành lá", "dưa leo", "đậu bắp"];
     const maxProbability = Math.max(...predictions);
-    const predictedClass = classLabels[predictions.indexOf(maxProbability)];
-    // Xác suất nhận diện
+    const predictedClassIndex = predictions.indexOf(maxProbability);
+    const predictedClass = classLabels[predictedClassIndex];
+
+    console.log("Predicted Class: ", predictedClass); // Kiểm tra lớp được dự đoán
+
     if (maxProbability < 0.7) {
-        result.innerText = "Không nhận diện được nông sản.";
+        result.innerText = `Không nhận diện được nông sản. Xác suất cao nhất: ${maxProbability.toFixed(2)}`;
         speak("Không nhận diện được nông sản.");
         preservationInfo.innerText = "";
         introContainer.innerHTML = "";
@@ -98,9 +105,9 @@ async function predict() {
         <p>${info.replace(/\n/g, '<br>')}</p>
     </div>`;
     speak(info);
-    // Hiển thị dữ liệu kế hoạch trồng cây và chi phí
     await fetchAndDisplayPlanData(predictedClass, introContainer, plantingPlanContainer, marketInfoContainer);
 }
+
 
 // Hàm Text-to-Speech
 function speak(text) {
