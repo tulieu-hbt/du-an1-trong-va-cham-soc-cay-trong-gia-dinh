@@ -111,5 +111,7 @@ async function init() {
 // Chạy khi trang đã tải
 document.addEventListener("DOMContentLoaded", async () => {
     await init();
+    preservationTexts = await loadPreservationTexts(); // Tải nội dung JSON
     captureButton.addEventListener("click", predict);
 });
+
