@@ -1,14 +1,14 @@
 // Hàm tải dữ liệu từ file JSON
 async function loadExcelData() {
     const url = 'https://tulieu-hbt.github.io/du-an1-trong-va-cham-soc-cay-trong-gia-dinh/assets/baocao.json';  // Đảm bảo URL đúng
-
     try {
         const response = await fetch(url);
+        if (!response.ok) { 
+            throw new Error(`HTTP error! status: ${response.status}`); 
+        }
         const data = await response.json();
-
         // Kiểm tra dữ liệu
         console.log("Dữ liệu từ file JSON:", data);
-
         return data;
     } catch (error) {
         console.error("Lỗi khi tải dữ liệu từ file JSON:", error);
@@ -47,10 +47,10 @@ async function fetchAndDisplayPlanData(nongsan, introContainer, plantingContaine
     }
 }
 
-
+// Hàm hiển thị kế hoạch trồng cây
 function displayPlantingPlan(plantingPlan, container) {
-    if (!container) {
-        console.error("Container is undefined");
+    if (!container || !plantingPlan) {
+        console.error("Container hoặc PlantingPlan undefined");
         return;
     }
     let tasksHTML = "<h3>Kế hoạch trồng và chăm sóc cây trồng</h3>";
