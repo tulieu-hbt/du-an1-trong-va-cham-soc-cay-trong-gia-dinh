@@ -110,15 +110,27 @@ async function predict() {
 
 
 // Hàm Text-to-Speech
+// Hàm Text-to-Speech
 function speak(text) {
     if ('speechSynthesis' in window) {
         const synthesis = window.speechSynthesis;
         const utterance = new SpeechSynthesisUtterance(text);
 
+        // Đảm bảo hỗ trợ ngôn ngữ tiếng Việt
         utterance.lang = 'vi-VN';
+
+        // Kiểm tra xem giọng nói có sẵn không
+        const voices = synthesis.getVoices();
+        if (voices.length > 0) {
+            utterance.voice = voices.find(voice => voice.lang === 'vi-VN') || voices[0];
+        }
+
         synthesis.speak(utterance);
+    } else {
+        console.error("Trình duyệt không hỗ trợ tính năng chuyển văn bản thành giọng nói.");
     }
 }
+
 
 // Khởi tạo
 async function init() {
