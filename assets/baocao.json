@@ -70,5 +70,86 @@
                 "Ghi Chu": ""
             }
         ]
-    }
+    },
+    {
+    "nongsan": "trái mướp",
+    "gioiThieu": {
+        "giongCay": "Giống cây trồng mướp hương hoặc mướp gối",
+        "phuongThucTrong": "Trồng trong thùng xốp hoặc tái chế từ vỏ chai nhựa, đặt nơi có nhiều ánh sáng.",
+        "dienTichSoLuong": "Phù hợp với diện tích nhỏ như ban công hoặc sân thượng thành thị.",
+        "dieuKienSinhTruong": "Cây mướp cần đất tơi xốp, thoát nước tốt, ánh sáng đầy đủ và phải được tưới nước đều."
+    },
+    "plantingPlan": [
+        {
+            "STT": "1. Chuẩn bị đất",
+            "CongViecCanLam": "Làm đất tơi xốp, trộn với phân hữu cơ, phân chuồng để tăng dinh dưỡng cho đất.",
+            "ThoiGianThucHien": "Tháng 1",
+            "VatLieuDungCuCanThiet": "Đất vườn, phân hữu cơ, vôi bột",
+            "GhiChu": "Xới đất kỹ trước khi bón phân, phơi đất sau khi xử lý."
+        },
+        {
+            "STT": "2. Chuẩn bị giống",
+            "CongViecCanLam": "Chọn hạt giống chất lượng cao, ngâm hạt giống trong nước ấm khoảng 24 giờ trước khi gieo.",
+            "ThoiGianThucHien": "Tháng 2",
+            "VatLieuDungCuCanThiet": "Hạt giống mướp, nước ấm",
+            "GhiChu": "Chọn hạt giống đồng đều về kích thước và không bị sâu bệnh."
+        },
+        {
+            "STT": "3. Gieo trồng",
+            "CongViecCanLam": "Gieo hạt vào bầu ươm hoặc khay gieo hạt, giữ ẩm cho đất.",
+            "ThoiGianThucHien": "Tháng 2",
+            "VatLieuDungCuCanThiet": "Hạt giống mướp, bầu ươm, khay gieo hạt",
+            "GhiChu": "Đảm bảo khoảng cách gieo hạt phù hợp để cây có đủ không gian phát triển."
+        },
+        {
+            "STT": "4. Chăm sóc",
+            "CongViecCanLam": "Tưới nước đều đặn, bón phân lần 1 vào gốc cây. Kiểm tra và loại bỏ cỏ dại, sâu bệnh.",
+            "ThoiGianThucHien": "Tháng 3 và thường xuyên",
+            "VatLieuDungCuCanThiet": "Phân bón NPK, nước tưới, thuốc trừ sâu",
+            "GhiChu": "Bón phân cách gốc 5cm, tưới nước vào buổi sáng hoặc chiều."
+        },
+        {
+            "STT": "5. Thu hoạch",
+            "CongViecCanLam": "Thu hoạch khi trái mướp đạt kích thước vừa phải, có màu xanh tươi.",
+            "ThoiGianThucHien": "Tháng 6",
+            "VatLieuDungCuCanThiet": "Dao, kéo",
+            "GhiChu": "Thu hoạch vào buổi sáng hoặc chiều để đảm bảo độ tươi ngon của quả."
+        }
+    ],
+    "costEstimate": [
+        {
+            "STT": 1,
+            "CacLoaiChiPhi": "Giống mướp",
+            "DonViTinh": "gói",
+            "DonGiaDong": 15000,
+            "SoLuong": 2,
+            "GhiChu": ""
+        },
+        {
+            "STT": 2,
+            "CacLoaiChiPhi": "Phân hữu cơ",
+            "DonViTinh": "kg",
+            "DonGiaDong": 3000,
+            "SoLuong": 30,
+            "GhiChu": ""
+        },
+        {
+            "STT": 3,
+            "CacLoaiChiPhi": "Phân NPK",
+            "DonViTinh": "kg",
+            "DonGiaDong": 8000,
+            "SoLuong": 10,
+            "GhiChu": ""
+        },
+        {
+            "STT": 4,
+            "CacLoaiChiPhi": "Giàn làm từ tầm vông hoặc tre nứa",
+            "DonViTinh": "m",
+            "DonGiaDong": 5000,
+            "SoLuong": 10,
+            "GhiChu": "Tầm vông hoặc tre nứa dài khoảng 2-3 mét."
+        }
+    ]
+}
+
 ]
