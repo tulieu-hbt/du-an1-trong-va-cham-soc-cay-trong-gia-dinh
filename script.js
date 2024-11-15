@@ -119,17 +119,25 @@ function speak(text) {
         // Đảm bảo hỗ trợ ngôn ngữ tiếng Việt
         utterance.lang = 'vi-VN';
 
-        // Kiểm tra xem giọng nói có sẵn không
-        const voices = synthesis.getVoices();
-        if (voices.length > 0) {
-            utterance.voice = voices.find(voice => voice.lang === 'vi-VN') || voices[0];
-        }
+        // Đợi giọng nói được tải xong
+        let voices = synthesis.getVoices();
 
-        synthesis.speak(utterance);
+        // Nếu giọng nói chưa sẵn sàng, đợi một chút và thử lại
+        if (voices.length === 0) {
+            synthesis.onvoiceschanged = () => {
+                voices = synthesis.getVoices();
+                utterance.voice = voices.find(voice => voice.lang === 'vi-VN') || voices[0];
+                synthesis.speak(utterance);
+            };
+        } else {
+            utterance.voice = voices.find(voice => voice.lang === 'vi-VN') || voices[0];
+            synthesis.speak(utterance);
+        }
     } else {
         console.error("Trình duyệt không hỗ trợ tính năng chuyển văn bản thành giọng nói.");
     }
 }
+
 
 
 // Khởi tạo
