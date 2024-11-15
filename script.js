@@ -13,7 +13,7 @@ const introContainer = document.getElementById("introductionContainer");
 
 // Hàm tải nội dung của file JSON
 async function loadPreservationTexts() { 
-    const response = await fetch('path/to/preservationTexts.json'); // Đường dẫn tới file JSON của bạn 
+    const response = await fetch('https://tulieu-hbt.github.io/du-an1-trong-va-cham-soc-cay-trong-gia-dinh/assets/preservationTexts.json'); // Đường dẫn tới file JSON của bạn 
     const data = await response.json(); 
     return data; 
 }
