@@ -4,18 +4,19 @@ async function loadExcelData() {
 
     try {
         const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
         const data = await response.json();
-
-        // Kiểm tra dữ liệu
-        console.log("Dữ liệu từ file JSON:", data);
-
+        console.log("Dữ liệu từ file JSON:", data);  // Kiểm tra dữ liệu
         return data;
     } catch (error) {
         console.error("Lỗi khi tải dữ liệu từ file JSON:", error);
-        return []; // Trả về một mảng rỗng nếu có lỗi
+        return [];
     }
 }
-// Hàm hiển thị thông tin giới thiệu- Thêm thông tin
+
+// Hàm hiển thị thông tin giới thiệu
 function displayIntroduction(gioiThieu, container) {
     if (!gioiThieu || typeof gioiThieu !== "object") {
         console.error("Không có thông tin giới thiệu");
@@ -29,15 +30,16 @@ function displayIntroduction(gioiThieu, container) {
         <p><strong>Diện tích & Số lượng:</strong> ${gioiThieu.dienTichSoLuong || ""}</p>
         <p><strong>Điều kiện sinh trưởng:</strong> ${gioiThieu.dieuKienSinhTruong || ""}</p>
     `;
-    container.innerHTML = introHTML + container.innerHTML; // Thêm thông tin giới thiệu trước nội dung hiện có
+    container.innerHTML = introHTML + container.innerHTML;
 }
-// Hàm hiển thị dữ liệu kế hoạch trồng cây và chi phí- Thêm thông tin
+
+// Hàm hiển thị dữ liệu kế hoạch trồng cây và chi phí
 async function fetchAndDisplayPlanData(nongsan, introContainer, plantingContainer, costContainer) {
     const data = await loadExcelData();
     const selectedData = data.find(item => item.nongsan === nongsan);
 
     if (selectedData) {
-        displayIntroduction(selectedData.gioiThieu, introContainer); // Hiển thị thông tin giới thiệu
+        displayIntroduction(selectedData.gioiThieu, introContainer);
         displayPlantingPlan(selectedData.plantingPlan, plantingContainer);
         displayCostEstimate(selectedData.costEstimate, costContainer);
     } else {
@@ -47,10 +49,10 @@ async function fetchAndDisplayPlanData(nongsan, introContainer, plantingContaine
     }
 }
 
-
+// Hàm hiển thị kế hoạch trồng cây
 function displayPlantingPlan(plantingPlan, container) {
-    if (!container) {
-        console.error("Container is undefined");
+    if (!container || !plantingPlan) {
+        console.error("Container hoặc PlantingPlan undefined");
         return;
     }
     let tasksHTML = "<h3>Kế hoạch trồng và chăm sóc cây trồng</h3>";
@@ -74,9 +76,8 @@ function displayPlantingPlan(plantingPlan, container) {
     });
 
     tasksHTML += "</table>";
-    container.innerHTML = tasksHTML; // Ghi đè nội dung của container
+    container.innerHTML = tasksHTML;
 }
-
 
 // Hàm hiển thị chi phí trồng cây
 function displayCostEstimate(costEstimate, container) {
@@ -110,10 +111,10 @@ function displayCostEstimate(costEstimate, container) {
         <td></td>
     </tr>`;
     costHTML += "</table>";
-    container.innerHTML = costHTML; // Ghi đè nội dung của container
+    container.innerHTML = costHTML;
 }
 
-// Hàm tạo dữ liệu giả lập cho giá thị trường (bổ sung dữ liệu)
+// Hàm tạo dữ liệu giả lập cho giá thị trường
 function generateMockMarketData(nongsan) {
     const mockPrices = {
         "cà chua": { price: (5000 + Math.random() * 2000).toFixed(0), date: new Date().toLocaleDateString() },
@@ -126,11 +127,21 @@ function generateMockMarketData(nongsan) {
     return mockPrices[nongsan] || { price: "Không có sẵn", date: new Date().toLocaleDateString() };
 }
 
-// Hàm hiển thị thông tin giá thị trường lên giao diện
+// Hàm hiển thị thông tin giá thị trường
 async function displayMarketData(nongsan, container) {
     const marketData = generateMockMarketData(nongsan);
     container.innerHTML = `<p>Giá thị trường hiện tại của ${nongsan}: ${marketData.price} VND/kg</p>
     <p>Cập nhật lần cuối: ${marketData.date}</p>`;
 }
 
-//export { loadExcelData, displayPlantingPlan, displayCostEstimate, displayMarketData };
+// Khởi tạo
+async function init() {
+    const introContainer = document.getElementById('introductionContainer');
+    const plantingContainer = document.getElementById('plantingPlanContainer');
+    const costContainer = document.getElementById('marketInfoContainer');
+    const nongsan = 'cà chua'; // Thay đổi giá trị này thành nông sản cần kiểm tra
+    await fetchAndDisplayPlanData(nongsan, introContainer, plantingContainer, costContainer);
+}
+
+// Chạy khi trang đã tải
+document.addEventListener('DOMContentLoaded', init);
