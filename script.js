@@ -11,13 +11,6 @@ const plantingPlanContainer = document.getElementById("plantingPlanContainer");
 const marketInfoContainer = document.getElementById("marketInfoContainer");
 const introContainer = document.getElementById("introductionContainer");
 
-// Hàm tải nội dung của file JSON
-async function loadPreservationTexts() { 
-    const response = await fetch('https://tulieu-hbt.github.io/du-an1-trong-va-cham-soc-cay-trong-gia-dinh/assets/preservationTexts.json'); // Đường dẫn tới file JSON của bạn 
-    const data = await response.json(); 
-    return data; 
-}
-const preservationTexts = await loadPreservationTexts;
 // Khởi tạo camera
 async function setupCamera() {
     try {
@@ -56,6 +49,13 @@ function captureImage() {
     capturedImage.src = canvas.toDataURL("image/png");
 }
 
+// Tải nội dung file JSON
+async function loadPreservationTexts() {
+    const response = await fetch('./preservation'); // Đường dẫn tới file JSON
+    const data = await response.json();
+    return data;
+}
+
 // Dự đoán nông sản
 async function predict() {
     if (!model) return;
@@ -67,7 +67,7 @@ async function predict() {
     const inputTensor = tf.expandDims(normalizedImage, 0);
 
     const predictions = await model.predict(inputTensor).data();
-    const classLabels = ["cà chua", "trái bầu", "trái mướp", "hành lá", "dưa leo", "đậu bắp","trái đu đủ"];
+    const classLabels = ["cà chua", "trái bầu", "trái mướp", "hành lá", "dưa leo", "đậu bắp"];
     const maxProbability = Math.max(...predictions);
     const predictedClass = classLabels[predictions.indexOf(maxProbability)];
     // Xác suất nhận diện
@@ -81,12 +81,14 @@ async function predict() {
         return;
     }
 
+    const preservationTexts = await loadPreservationTexts();
     result.innerText = `Kết quả: ${predictedClass}`;
+    const info = preservationTexts[predictedClass];
     preservationInfo.innerHTML = `<div class="introduction">
         <h3>${predictedClass}</h3>
-        <p>${preservationTexts[predictedClass]}</p>
+        <p>${info.replace(/\n/g, '<br>')}</p>
     </div>`;
-    speak(preservationTexts[predictedClass]);
+    speak(info);
     // Hiển thị dữ liệu kế hoạch trồng cây và chi phí
     await fetchAndDisplayPlanData(predictedClass, introContainer, plantingPlanContainer, marketInfoContainer);
 }
@@ -106,12 +108,11 @@ function speak(text) {
 async function init() {
     await loadModel();
     await setupCamera();
+    preservationTexts = await loadPreservationTexts();
 }
 
 // Chạy khi trang đã tải
 document.addEventListener("DOMContentLoaded", async () => {
     await init();
-    preservationTexts = await loadPreservationTexts(); // Tải nội dung JSON
     captureButton.addEventListener("click", predict);
 });
-
