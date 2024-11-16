@@ -115,32 +115,8 @@ function speak(text) {
         const synthesis = window.speechSynthesis;
         const utterance = new SpeechSynthesisUtterance(text);
 
-        // Đảm bảo hỗ trợ ngôn ngữ tiếng Việt
         utterance.lang = 'vi-VN';
-
-        // Hàm để chọn giọng nói tiếng Việt
-        const selectVoice = () => {
-            let voices = synthesis.getVoices();
-            console.log(voices); // Kiểm tra danh sách giọng nói
-            let voice = voices.find(voice => voice.lang === 'vi-VN');
-            if (voice) {
-                utterance.voice = voice;
-                synthesis.speak(utterance);
-            } else {
-                console.error("Không tìm thấy giọng nói tiếng Việt.");
-            }
-        };
-
-        // Đợi giọng nói được tải xong
-        if (synthesis.getVoices().length === 0) {
-            synthesis.onvoiceschanged = () => {
-                selectVoice();
-            };
-        } else {
-            selectVoice();
-        }
-    } else {
-        console.error("Trình duyệt không hỗ trợ tính năng chuyển văn bản thành giọng nói.");
+        synthesis.speak(utterance);
     }
 }
 
