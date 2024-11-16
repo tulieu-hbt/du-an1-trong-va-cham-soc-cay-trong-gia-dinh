@@ -1,3 +1,4 @@
+
 let model;
 const URL = "model/";
 
@@ -147,3 +148,4 @@ document.addEventListener("DOMContentLoaded", async () => {
     await init();
     captureButton.addEventListener("click", predict);
 });
+
