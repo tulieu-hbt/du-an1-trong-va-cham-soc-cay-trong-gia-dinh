@@ -11,8 +11,6 @@ const plantingPlanContainer = document.getElementById("plantingPlanContainer");
 const marketInfoContainer = document.getElementById("marketInfoContainer");
 const introContainer = document.getElementById("introductionContainer");
 
-let preservationTexts = {}; // Khởi tạo biến preservationTexts
-
 // Khởi tạo camera
 async function setupCamera() {
     try {
@@ -66,6 +64,7 @@ async function loadPreservationTexts() {
     }
 }
 
+
 // Dự đoán nông sản
 async function predict() {
     if (!model) return;
@@ -101,14 +100,16 @@ async function predict() {
     const preservationTexts = await loadPreservationTexts();
     result.innerText = `Kết quả: ${predictedClass} (Xác suất: ${maxProbability.toFixed(2)})`;
     const info = preservationTexts[predictedClass];
-    preservationInfo.innerHTML = `
-        ${predictedClass}
-        ${info.replace(/\n/g, '')}
-    `;
+    preservationInfo.innerHTML = `<div class="introduction">
+        <h3>${predictedClass}</h3>
+        <p>${info.replace(/\n/g, '<br>')}</p>
+    </div>`;
     speak(info);
     await fetchAndDisplayPlanData(predictedClass, introContainer, plantingPlanContainer, marketInfoContainer);
 }
 
+
+// Hàm Text-to-Speech
 // Hàm Text-to-Speech
 function speak(text) {
     if ('speechSynthesis' in window) {
@@ -137,6 +138,8 @@ function speak(text) {
     }
 }
 
+
+
 // Khởi tạo
 async function init() {
     await loadModel();
@@ -149,4 +152,3 @@ document.addEventListener("DOMContentLoaded", async () => {
     await init();
     captureButton.addEventListener("click", predict);
 });
-
