@@ -57,23 +57,24 @@
 <body>
     <div class="container">
         <h1>Ứng Dụng Phân Loại Nông Sản</h1>
-        <p>Chụp Ảnh và Phân Loại</p>
+        <p id="instruction">Chụp Ảnh và Phân Loại</p>
         <button class="button" onclick="captureAndClassify()">Chụp Ảnh</button>
         <div id="result"></div>
+        <div id="webcam-container"></div>
+        <div id="label-container"></div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script> <!-- Bao gồm TensorFlow.js -->
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image"></script> <!-- Bao gồm Teachable Machine -->
-    <script src="script.js"></script> <!-- Bao gồm tệp JavaScript -->
     <script>
         // URL của mô hình Teachable Machine
-        const URL = "URL_CUA_MO_HINH_CUA_BAN";
+        const MODEL_URL = "URL_CUA_MO_HINH_CUA_BAN";
 
         let model, webcam, labelContainer, maxPredictions;
 
         async function init() {
-            const modelURL = URL + "model.json";
-            const metadataURL = URL + "metadata.json";
+            const modelURL = MODEL_URL + "model.json";
+            const metadataURL = MODEL_URL + "metadata.json";
 
             // Tải mô hình và metadata
             model = await tmImage.load(modelURL, metadataURL);
@@ -112,7 +113,19 @@
         function captureAndClassify() {
             init();
         }
+
+        // Kiểm tra thiết bị và thay đổi giao diện
+        function checkDevice() {
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            if (/android/i.test(userAgent) || /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                document.getElementById('instruction').innerText = "Bạn đang sử dụng điện thoại. Vui lòng sử dụng máy tính để chụp ảnh và phân loại.";
+                document.querySelector('.button').style.display = 'none';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            checkDevice();
+        });
     </script>
 </body>
 </html>
-
