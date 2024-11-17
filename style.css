@@ -1,60 +1,5 @@
-/* CSS để loại bỏ khoảng trống không cần thiết */
-/* Các kiểu chung */
-.container {
-  text-align: center;
-  padding: 20px;
-  background-color: #f4f4f4;
-}
-
-/* Kiểu dành cho máy tính (mặc định) */
-#result {
-  font-size: 18px;
-  color: #333;
-}
-
-#preservationInfo {
-  font-size: 16px;
-  color: #555;
-}
-
-#introductionContainer, #plantingPlanContainer, #marketInfoContainer {
-  display: block;
-  margin-top: 20px;
-}
-
-/* Thêm các kiểu dành cho thiết bị di động */
-@media only screen and (max-width: 768px) {
-  /* Khi ở trên điện thoại, hiển thị các thông tin dạng văn bản */
-  #result, #preservationInfo {
-    font-size: 16px; /* Chỉnh lại font-size cho dễ đọc trên điện thoại */
-    display: block; /* Hiển thị dưới dạng văn bản */
-  }
-
-  /* Ẩn các bảng và thay bằng văn bản */
-  .camera-content {
-    display: block; /* Hiển thị video và ảnh dưới dạng văn bản */
-    margin-top: 20px;
-  }
-  
-  .image-container img {
-    width: 100%; /* Đảm bảo ảnh vừa với màn hình điện thoại */
-  }
-
-  #captureButton {
-    display: block;
-    margin-top: 20px;
-    width: 100%;
-  }
-
-  /* Đảm bảo các container không bị ẩn hoặc đè lên nhau */
-  #introductionContainer,
-  #plantingPlanContainer,
-  #marketInfoContainer {
-    display: block;
-  }
-}
-/*---- Phần cũ */
- {
+/* Tổng quan */
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -78,9 +23,10 @@ body {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Đảm bảo canh giữa nội dung trong container */
+    text-align: center;
 }
 
+/* Tiêu đề */
 h1 {
     color: #2c3e50;
     margin-bottom: 20px;
@@ -90,6 +36,7 @@ h1 {
     letter-spacing: 2px;
 }
 
+/* Nội dung camera và ảnh */
 .camera-content {
     display: flex;
     justify-content: space-between;
@@ -118,6 +65,7 @@ video#camera, .image-container img {
     object-fit: cover;
 }
 
+/* Nút chụp ảnh */
 .button-container {
     margin-top: 20px;
     display: flex;
@@ -139,6 +87,7 @@ video#camera, .image-container img {
     background-color: #2980b9;
 }
 
+/* Văn bản hiển thị kết quả */
 .result-text {
     font-weight: bold;
     color: #2c3e50;
@@ -151,10 +100,11 @@ video#camera, .image-container img {
     color: #555;
     font-size: 18px;
     margin-top: 10px;
-    text-align: left; /* Căn trái cho văn bản mô tả */
-    line-height: 1.6; /* Dãn dòng để dễ đọc hơn */
+    text-align: left;
+    line-height: 1.6;
 }
 
+/* Phần giới thiệu */
 .introduction {
     margin-top: 20px;
     padding: 20px;
@@ -169,16 +119,17 @@ video#camera, .image-container img {
     font-size: 24px;
     font-weight: 700;
     text-transform: uppercase;
-    text-align: left; /* Căn trái cho tiêu đề trong phần introduction */
+    text-align: left;
 }
 
 .introduction p {
     font-size: 18px;
     color: #555;
     margin-bottom: 10px;
-    text-align: left; /* Căn trái cho văn bản mô tả */
+    text-align: left;
 }
 
+/* Phần kế hoạch và chi phí */
 .market-info-container, .planting-plan-container, .info-container {
     margin-top: 30px;
     padding: 20px;
@@ -193,9 +144,10 @@ video#camera, .image-container img {
     font-size: 24px;
     font-weight: 700;
     text-transform: uppercase;
-    text-align: left; /* Căn trái cho tiêu đề trong các phần khác */
+    text-align: left;
 }
 
+/* Bảng hiển thị dữ liệu */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -252,6 +204,7 @@ td.ghiChu, th.ghiChu {
     width: 300px;
 }
 
+/* Định dạng cho thiết bị di động */
 @media (max-width: 768px) {
     .camera-content {
         flex-direction: column;
@@ -260,5 +213,19 @@ td.ghiChu, th.ghiChu {
     .camera-section, .image-container {
         max-width: 100%;
         height: 300px;
+    }
+
+    .capture-button {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .introduction, .planting-plan-container, .market-info-container {
+        padding: 10px;
+    }
+
+    table th, table td {
+        font-size: 14px;
+        padding: 6px;
     }
 }
