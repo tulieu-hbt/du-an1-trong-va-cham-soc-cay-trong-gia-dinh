@@ -1,5 +1,60 @@
 /* CSS để loại bỏ khoảng trống không cần thiết */
-* {
+/* Các kiểu chung */
+.container {
+  text-align: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+/* Kiểu dành cho máy tính (mặc định) */
+#result {
+  font-size: 18px;
+  color: #333;
+}
+
+#preservationInfo {
+  font-size: 16px;
+  color: #555;
+}
+
+#introductionContainer, #plantingPlanContainer, #marketInfoContainer {
+  display: block;
+  margin-top: 20px;
+}
+
+/* Thêm các kiểu dành cho thiết bị di động */
+@media only screen and (max-width: 768px) {
+  /* Khi ở trên điện thoại, hiển thị các thông tin dạng văn bản */
+  #result, #preservationInfo {
+    font-size: 16px; /* Chỉnh lại font-size cho dễ đọc trên điện thoại */
+    display: block; /* Hiển thị dưới dạng văn bản */
+  }
+
+  /* Ẩn các bảng và thay bằng văn bản */
+  .camera-content {
+    display: block; /* Hiển thị video và ảnh dưới dạng văn bản */
+    margin-top: 20px;
+  }
+  
+  .image-container img {
+    width: 100%; /* Đảm bảo ảnh vừa với màn hình điện thoại */
+  }
+
+  #captureButton {
+    display: block;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  /* Đảm bảo các container không bị ẩn hoặc đè lên nhau */
+  #introductionContainer,
+  #plantingPlanContainer,
+  #marketInfoContainer {
+    display: block;
+  }
+}
+/*---- Phần cũ */
+ {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
