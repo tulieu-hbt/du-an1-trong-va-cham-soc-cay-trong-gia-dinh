@@ -1,139 +1,39 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ứng Dụng Phân Loại Nông Sản</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            padding: 20px;
-            background-color: #fff;
-            margin: 50px auto;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            border-radius: 8px;
-        }
-        .button {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        .button:hover {
-            background-color: #45a049;
-        }
-        #result {
-            margin-top: 20px;
-            font-size: 18px;
-            color: #333;
-        }
-        @media only screen and (max-width: 600px) {
-            .container {
-                box-shadow: none;
-                margin: 0;
-                padding: 10px;
-            }
-            .button {
-                display: none;
-            }
-            #result {
-                font-size: 16px;
-                color: #000;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trồng Và Chăm Sóc Cây Trong Gia Đình</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script defer src="hien_thi_noi_dung.js"></script>
+  <script defer src="script.js"></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Ứng Dụng Phân Loại Nông Sản</h1>
-        <p id="instruction">Chụp Ảnh và Phân Loại</p>
-        <button class="button" id="captureButton" onclick="captureAndClassify()">Chụp Ảnh</button>
-        <div id="result"></div>
-        <div id="webcam-container"></div>
-        <div id="label-container"></div>
+  <div class="container">
+    <h1>Ứng Dụng Phân Loại Nông Sản</h1>
+
+    <div class="camera-content">
+      <div class="camera-section">
+        <video id="camera" autoplay playsinline></video>
+      </div>
+      <div class="image-container">
+        <img id="capturedImage" src="" alt="Captured Image">
+      </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image"></script>
-    <script>
-        const MODEL_URL = "https://tulieu-hbt.github.io/du-an1-trong-va-cham-soc-cay-trong-gia-dinh/model/";  // Cập nhật URL mô hình Teachable Machine của bạn
+    <div class="button-container">
+      <button id="captureButton" class="capture-button">Chụp Ảnh và Phân Loại</button>
+    </div>
 
-        let model, webcam, labelContainer, maxPredictions, isModelLoaded = false;
+    <div id="result" class="result-text"></div>
+    <div id="preservationInfo" class="preservation-text"></div>
 
-        async function init() {
-            const modelURL = MODEL_URL + "model.json";
-            const metadataURL = MODEL_URL + "metadata.json";
+    <!-- Thêm div để chứa thông tin giới thiệu -->
+    <div id="introductionContainer" class="introduction"></div>
 
-            try {
-                // Tải mô hình và metadata
-                model = await tmImage.load(modelURL, metadataURL);
-                maxPredictions = model.getTotalClasses();
-                isModelLoaded = true;
-
-                // Khởi tạo webcam
-                const flip = true;
-                webcam = new tmImage.Webcam(200, 200, flip);
-                await webcam.setup(); 
-                await webcam.play();
-                window.requestAnimationFrame(loop);
-
-                // Thêm webcam vào trang web
-                document.getElementById("webcam-container").appendChild(webcam.canvas);
-                labelContainer = document.getElementById("label-container");
-                for (let i = 0; i < maxPredictions; i++) {
-                    labelContainer.appendChild(document.createElement("div"));
-                }
-
-                // Hiển thị nút "Chụp Ảnh"
-                document.getElementById("captureButton").style.display = "block";
-            } catch (error) {
-                console.error("Lỗi tải mô hình:", error);
-                alert("Không thể tải mô hình phân loại. Vui lòng thử lại sau.");
-            }
-        }
-
-        async function loop() {
-            webcam.update();
-            if (isModelLoaded) await predict();
-            window.requestAnimationFrame(loop);
-        }
-
-        async function predict() {
-            const prediction = await model.predict(webcam.canvas);
-            for (let i = 0; i < maxPredictions; i++) {
-                const classPrediction = prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-                labelContainer.childNodes[i].innerHTML = classPrediction;
-            }
-        }
-
-        function captureAndClassify() {
-            if (!isModelLoaded) {
-                init();  // Chỉ gọi init một lần khi mô hình chưa được tải
-            }
-        }
-
-        function checkDevice() {
-            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-            if (/android/i.test(userAgent) || (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream)) {
-                document.getElementById('instruction').innerText = "Bạn đang sử dụng điện thoại. Vui lòng sử dụng máy tính để chụp ảnh và phân loại.";
-                document.querySelector('.button').style.display = 'none';
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', (event) => {
-            checkDevice();
-        });
-    </script>
+    <div id="plantingPlanContainer" class="planting-plan-container"></div>
+    <div id="marketInfoContainer" class="market-info-container"></div>
+  </div>
 </body>
 </html>
