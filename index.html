@@ -1,39 +1,118 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trồng Và Chăm Sóc Cây Trong Gia Đình</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
-  <script defer src="hien_thi_noi_dung.js"></script>
-  <script defer src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng Dụng Phân Loại Nông Sản</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Bao gồm tệp CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            padding: 20px;
+            background-color: #fff;
+            margin: 50px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            border-radius: 8px;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+        @media only screen and (max-width: 600px) {
+            .container {
+                box-shadow: none;
+                margin: 0;
+                padding: 10px;
+            }
+            .button {
+                display: none;
+            }
+            #result {
+                font-size: 16px;
+                color: #000;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Ứng Dụng Phân Loại Nông Sản</h1>
-
-    <div class="camera-content">
-      <div class="camera-section">
-        <video id="camera" autoplay playsinline></video>
-      </div>
-      <div class="image-container">
-        <img id="capturedImage" src="" alt="Captured Image">
-      </div>
+    <div class="container">
+        <h1>Ứng Dụng Phân Loại Nông Sản</h1>
+        <p>Chụp Ảnh và Phân Loại</p>
+        <button class="button" onclick="captureAndClassify()">Chụp Ảnh</button>
+        <div id="result"></div>
     </div>
 
-    <div class="button-container">
-      <button id="captureButton" class="capture-button">Chụp Ảnh và Phân Loại</button>
-    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script> <!-- Bao gồm TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image"></script> <!-- Bao gồm Teachable Machine -->
+    <script src="script.js"></script> <!-- Bao gồm tệp JavaScript -->
+    <script>
+        // URL của mô hình Teachable Machine
+        const URL = "URL_CUA_MO_HINH_CUA_BAN";
 
-    <div id="result" class="result-text"></div>
-    <div id="preservationInfo" class="preservation-text"></div>
+        let model, webcam, labelContainer, maxPredictions;
 
-    <!-- Thêm div để chứa thông tin giới thiệu -->
-    <div id="introductionContainer" class="introduction"></div>
+        async function init() {
+            const modelURL = URL + "model.json";
+            const metadataURL = URL + "metadata.json";
 
-    <div id="plantingPlanContainer" class="planting-plan-container"></div>
-    <div id="marketInfoContainer" class="market-info-container"></div>
-  </div>
+            // Tải mô hình và metadata
+            model = await tmImage.load(modelURL, metadataURL);
+            maxPredictions = model.getTotalClasses();
+
+            // Khởi tạo webcam
+            const flip = true; // Lật hình ảnh webcam
+            webcam = new tmImage.Webcam(200, 200, flip); // Chiều rộng và chiều cao của webcam
+            await webcam.setup(); // Yêu cầu quyền truy cập vào webcam
+            await webcam.play();
+            window.requestAnimationFrame(loop);
+
+            // Thêm webcam vào trang web
+            document.getElementById("webcam-container").appendChild(webcam.canvas);
+            labelContainer = document.getElementById("label-container");
+            for (let i = 0; i < maxPredictions; i++) { // Và các nhãn dự đoán
+                labelContainer.appendChild(document.createElement("div"));
+            }
+        }
+
+        async function loop() {
+            webcam.update(); // Cập nhật hình ảnh từ webcam
+            await predict();
+            window.requestAnimationFrame(loop);
+        }
+
+        async function predict() {
+            // Dự đoán hình ảnh từ webcam
+            const prediction = await model.predict(webcam.canvas);
+            for (let i = 0; i < maxPredictions; i++) {
+                const classPrediction = prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+                labelContainer.childNodes[i].innerHTML = classPrediction;
+            }
+        }
+
+        function captureAndClassify() {
+            init();
+        }
+    </script>
 </body>
 </html>
+
