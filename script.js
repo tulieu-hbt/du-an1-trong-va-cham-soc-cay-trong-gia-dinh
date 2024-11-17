@@ -12,6 +12,34 @@ const marketInfoContainer = document.getElementById("marketInfoContainer");
 const introContainer = document.getElementById("introductionContainer");
 
 // Khởi tạo camera
+document.addEventListener('DOMContentLoaded', function() {
+  // Kiểm tra nếu là điện thoại
+  function checkIfMobile() {
+    return window.innerWidth <= 768; // Kiểm tra nếu màn hình nhỏ hơn hoặc bằng 768px
+  }
+
+  // Lắng nghe sự kiện khi nhấn nút chụp ảnh
+  document.getElementById('captureButton').addEventListener('click', function() {
+    if (checkIfMobile()) {
+      // Hiển thị thông tin dưới dạng văn bản khi trên điện thoại
+      document.getElementById('result').style.display = 'block';
+      document.getElementById('preservationInfo').style.display = 'block';
+      
+      // Ẩn các bảng thông tin nếu cần
+      document.getElementById('plantingPlanContainer').style.display = 'none';
+      document.getElementById('marketInfoContainer').style.display = 'none';
+    } else {
+      // Hiển thị các bảng thông tin trên máy tính
+      document.getElementById('result').style.display = 'block';
+      document.getElementById('preservationInfo').style.display = 'block';
+      
+      // Hiển thị bảng thông tin nếu trên máy tính
+      document.getElementById('plantingPlanContainer').style.display = 'block';
+      document.getElementById('marketInfoContainer').style.display = 'block';
+    }
+  });
+});
+
 async function setupCamera() {
     try {
         const stream = await navigator.mediaDevices.getUserMedia({
