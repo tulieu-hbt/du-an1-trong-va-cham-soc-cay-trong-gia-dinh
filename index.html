@@ -13,6 +13,7 @@
   <div class="container">
     <h1>Ứng Dụng Phân Loại Nông Sản</h1>
 
+    <!-- Camera và ảnh chụp -->
     <div class="camera-content">
       <div class="camera-section">
         <video id="camera" autoplay playsinline></video>
@@ -22,18 +23,117 @@
       </div>
     </div>
 
+    <!-- Nút chụp ảnh -->
     <div class="button-container">
       <button id="captureButton" class="capture-button">Chụp Ảnh và Phân Loại</button>
     </div>
 
+    <!-- Kết quả phân loại -->
     <div id="result" class="result-text"></div>
+
+    <!-- Thông tin bảo quản -->
     <div id="preservationInfo" class="preservation-text"></div>
 
-    <!-- Thêm div để chứa thông tin giới thiệu -->
+    <!-- Giới thiệu -->
     <div id="introductionContainer" class="introduction"></div>
 
+    <!-- Kế hoạch trồng -->
     <div id="plantingPlanContainer" class="planting-plan-container"></div>
+
+    <!-- Thông tin thị trường -->
     <div id="marketInfoContainer" class="market-info-container"></div>
   </div>
+
+  <style>
+    /* Định dạng cơ bản */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #f9f9f9;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .camera-content {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+
+    .camera-section video {
+      width: 100%;
+      max-width: 350px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+    }
+
+    .image-container img {
+      width: 100%;
+      max-width: 350px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .capture-button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .capture-button:hover {
+      background-color: #0056b3;
+    }
+
+    .result-text, .preservation-text {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .introduction, .planting-plan-container, .market-info-container {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    /* Định dạng cho thiết bị di động */
+    @media (max-width: 768px) {
+      .preservation-text, .introduction {
+        font-size: 16px;
+        line-height: 1.5;
+        padding: 10px;
+      }
+
+      #plantingPlanContainer, #marketInfoContainer {
+        display: none; /* Ẩn các bảng thông tin trên điện thoại */
+      }
+    }
+  </style>
 </body>
 </html>
