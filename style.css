@@ -232,8 +232,8 @@ tr:nth-child(even) td {
 }
 
 th.stt, td.stt {
-    width: 120px;
-    white-space: nowrap;
+    width: 200px; /* Tăng độ rộng của cột STT */
+    white-space: nowrap; /* Đảm bảo văn bản không bị xuống dòng */
 }
 
 td.congViec, th.congViec {
