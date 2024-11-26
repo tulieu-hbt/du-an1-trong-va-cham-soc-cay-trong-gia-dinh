@@ -34,6 +34,53 @@
 
     <div id="plantingPlanContainer" class="planting-plan-container"></div>
     <div id="marketInfoContainer" class="market-info-container"></div>
+
+    <!-- Thêm bảng thông tin -->
+    <table>
+      <thead>
+        <tr>
+          <th class="stt">STT</th>
+          <th class="congViec">Công Việc</th>
+          <th class="thoiGian">Thời Gian</th>
+          <th class="vatLieu">Vật Liệu</th>
+          <th class="ghiChu">Ghi Chú</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="stt">1. Chuẩn bị đất</td>
+          <td class="congViec">...</td>
+          <td class="thoiGian">...</td>
+          <td class="vatLieu">...</td>
+          <td class="ghiChu">...</td>
+        </tr>
+        <tr>
+          <td class="stt">2. Chuẩn bị giống</td>
+          <td class="congViec">...</td>
+          <td class="thoiGian">...</td>
+          <td class="vatLieu">...</td>
+          <td class="ghiChu">...</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Thêm nội dung văn bản thay thế cho bảng trên điện thoại -->
+    <div class="text-content">
+      <p>1. Chuẩn bị đất</p>
+      <p>2. Chuẩn bị giống</p>
+    </div>
   </div>
+
+  <script>
+    document.getElementById('captureButton').addEventListener('click', function() {
+      // Chụp ảnh và phân loại logic ở đây
+
+      // Phát giọng nói tiếng Việt
+      const msg = new SpeechSynthesisUtterance();
+      msg.text = 'Ảnh đã được chụp và phân loại';
+      msg.lang = 'vi-VN';
+      window.speechSynthesis.speak(msg);
+    });
+  </script>
 </body>
 </html>
