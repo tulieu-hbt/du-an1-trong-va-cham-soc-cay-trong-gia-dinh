@@ -232,12 +232,12 @@ tr:nth-child(even) td {
 }
 
 th.stt, td.stt {
-    width: 250px; /* Tăng độ rộng của cột STT */
+    width: 200px; /* Tăng độ rộng của cột STT */
     white-space: nowrap; /* Đảm bảo văn bản không bị xuống dòng */
 }
 
 td.congViec, th.congViec {
-    width: 220px;
+    width: 200px;
 }
 
 td.thoiGian, th.thoiGian {
