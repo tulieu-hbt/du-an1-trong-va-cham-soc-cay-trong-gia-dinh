@@ -233,14 +233,14 @@ tr:nth-child(even) td {
 }
 
 th.stt, td.stt {
-    width: 200px; /* Tăng độ rộng của cột STT */
+    width: 150px; /* Tăng độ rộng của cột STT */
     white-space: nowrap; /* Đảm bảo văn bản không bị xuống dòng */
     overflow: hidden; /* Ẩn phần văn bản vượt quá */
     text-overflow: ellipsis; /* Thêm dấu "..." nếu văn bản bị cắt */
 }
 
 td.congViec, th.congViec {
-    width: 250px; /* Giảm độ rộng của cột Công Việc */
+    width: 300px; /* Giảm độ rộng của cột Công Việc */
 }
 
 td.thoiGian, th.thoiGian {
