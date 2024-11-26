@@ -232,7 +232,7 @@ tr:nth-child(even) td {
 }
 
 th.stt, td.stt {
-    width: 220px; /* Tăng độ rộng của cột STT */
+    width: 250px; /* Tăng độ rộng của cột STT */
     white-space: nowrap; /* Đảm bảo văn bản không bị xuống dòng */
 }
 
