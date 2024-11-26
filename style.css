@@ -200,6 +200,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
+    table-layout: fixed; /* Đảm bảo các cột có độ rộng cố định */
 }
 
 th, td {
@@ -239,19 +240,19 @@ th.stt, td.stt {
 }
 
 td.congViec, th.congViec {
-    width: 200px;
+    width: 150px; /* Giảm độ rộng của cột Công Việc */
 }
 
 td.thoiGian, th.thoiGian {
-    width: 150px;
+    width: 100px; /* Giảm độ rộng của cột Thời Gian */
 }
 
 td.vatLieu, th.vatLieu {
-    width: 200px;
+    width: 150px; /* Giảm độ rộng của cột Vật Liệu */
 }
 
 td.ghiChu, th.ghiChu {
-    width: 300px;
+    width: 200px; /* Giảm độ rộng của cột Ghi Chú */
 }
 
 @media (max-width: 768px) {
@@ -259,6 +260,7 @@ td.ghiChu, th.ghiChu {
         flex-direction: column;
     }
 
+    .camera-section, .image-container
     .camera-section, .image-container {
         max-width: 100%;
         height: 300px;
