@@ -140,9 +140,10 @@ function displayCostEstimate(costEstimate, container) {
 function generateMockMarketData(nongsan) {
     const mockPrices = {
         "cà chua": { price: (5000 + Math.random() * 2000).toFixed(0), date: new Date().toLocaleDateString() },
+        "khổ qua": { price: (10000 + Math.random() * 4000).toFixed(0), date: new Date().toLocaleDateString() },
         "trái bầu": { price: (15000 + Math.random() * 3000).toFixed(0), date: new Date().toLocaleDateString() },
-        "đậu bắp": { price: (10000 + Math.random() * 4000).toFixed(0), date: new Date().toLocaleDateString() },
-        "khổ qua": { price: (10000 + Math.random() * 4000).toFixed(0), date: new Date().toLocaleDateString() }
+        "đậu bắp": { price: (10000 + Math.random() * 4000).toFixed(0), date: new Date().toLocaleDateString() }
+       
     };
     return mockPrices[nongsan] || { price: "Không có sẵn", date: new Date().toLocaleDateString() };
 }
