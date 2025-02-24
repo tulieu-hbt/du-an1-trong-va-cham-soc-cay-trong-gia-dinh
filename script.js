@@ -80,7 +80,7 @@ async function predict() {
     const predictions = await model.predict(inputTensor).data();
     console.log("Predictions: ", predictions); // Kiểm tra giá trị của dự đoán
 
-    const classLabels = ["cà chua", "trái bầu", "trái mướp", "hành lá", "dưa leo", "đậu bắp"];
+    const classLabels = ["cà chua", "khổ qua", "trái bầu", "đậu bắp"];
     const maxProbability = Math.max(...predictions);
     const predictedClassIndex = predictions.indexOf(maxProbability);
     const predictedClass = classLabels[predictedClassIndex];
