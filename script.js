@@ -80,14 +80,14 @@ async function predict() {
     const predictions = await model.predict(inputTensor).data();
     console.log("Predictions: ", predictions); // Kiểm tra giá trị của dự đoán
 
-    const classLabels = ["cà chua", "khổ qua", "trái bầu", "đậu bắp"];
+    const classLabels = ["cà chua", "trái bầu", "khổ qua", "đậu bắp"];
     const maxProbability = Math.max(...predictions);
     const predictedClassIndex = predictions.indexOf(maxProbability);
     const predictedClass = classLabels[predictedClassIndex];
 
     console.log("Predicted Class: ", predictedClass); // Kiểm tra lớp được dự đoán
 
-    if (maxProbability < 0.7) {
+    if (maxProbability < 0.9) {
         result.innerText = `Không nhận diện được nông sản. Xác suất cao nhất: ${maxProbability.toFixed(2)}`;
         speak("Không nhận diện được nông sản.");
         preservationInfo.innerText = "";
