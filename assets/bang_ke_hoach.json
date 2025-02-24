@@ -72,85 +72,85 @@
         ]
     },
     {
-        "nongsan": "trái mướp",
+        "nongsan": "khổ qua",
         "gioiThieu": {
-            "giongCay": "Giống cây trồng mướp hương hoặc mướp gối",
-            "phuongThucTrong": "Trồng trong thùng xốp hoặc tái chế từ vỏ chai nhựa, đặt nơi có nhiều ánh sáng.",
-            "dienTichSoLuong": "Phù hợp với diện tích nhỏ như ban công hoặc sân thượng thành thị.",
-            "dieuKienSinhTruong": "Cây mướp cần đất tơi xốp, thoát nước tốt, ánh sáng đầy đủ và phải được tưới nước đều."
-        },
-        "plantingPlan": [
-            {
-                "STT": "1. Chuẩn bị đất",
-                "Cong Viec Can Lam": "Làm đất tơi xốp, trộn với phân hữu cơ, phân chuồng để tăng dinh dưỡng cho đất.",
-                "Thoi Gian Thuc Hien": "Tháng 1",
-                "Vat Lieu, Dung Cu Can Thiet": "Đất vườn, phân hữu cơ, vôi bột",
-                "Ghi Chu": "Xới đất kỹ trước khi bón phân, phơi đất sau khi xử lý."
-            },
-            {
-                "STT": "2. Chuẩn bị giống",
-                "Cong Viec Can Lam": "Chọn hạt giống chất lượng cao, ngâm hạt giống trong nước ấm khoảng 24 giờ trước khi gieo.",
-                "Thoi Gian Thuc Hien": "Tháng 2",
-                "Vat Lieu, Dung Cu Can Thiet": "Hạt giống mướp, nước ấm",
-                "Ghi Chu": "Chọn hạt giống đồng đều về kích thước và không bị sâu bệnh."
-            },
-            {
-                "STT": "3. Gieo trồng",
-                "Cong Viec Can Lam": "Gieo hạt vào bầu ươm hoặc khay gieo hạt, giữ ẩm cho đất.",
-                "Thoi Gian Thuc Hien": "Tháng 2",
-                "Vat Lieu, Dung Cu Can Thiet": "Hạt giống mướp, bầu ươm, khay gieo hạt",
-                "Ghi Chu": "Đảm bảo khoảng cách gieo hạt phù hợp để cây có đủ không gian phát triển."
-            },
-            {
-                "STT": "4. Chăm sóc",
-                "Cong Viec Can Lam": "Tưới nước đều đặn, bón phân lần 1 vào gốc cây. Kiểm tra và loại bỏ cỏ dại, sâu bệnh.",
-                "Thoi Gian Thuc Hien": "Tháng 3 và thường xuyên",
-                "Vat Lieu, Dung Cu Can Thiet": "Phân bón NPK, nước tưới, thuốc trừ sâu",
-                "Ghi Chu": "Bón phân cách gốc 5cm, tưới nước vào buổi sáng hoặc chiều."
-            },
-            {
-                "STT": "5. Thu hoạch",
-                "Cong Viec Can Lam": "Thu hoạch khi trái mướp đạt kích thước vừa phải, có màu xanh tươi.",
-                "Thoi Gian Thuc Hien": "Tháng 6",
-                "Vat Lieu, Dung Cu Can Thiet": "Dao, kéo",
-                "Ghi Chu": "Thu hoạch vào buổi sáng hoặc chiều để đảm bảo độ tươi ngon của quả."
-            }
-        ],
-        "costEstimate": [
-            {
-                "STT": 1,
-                "Cac Loai Chi Phi": "Giống mướp",
-                "Don Vi Tinh": "gói",
-                "Don Gia (dong)": 15000,
-                "So Luong": 2,
-                "Ghi Chu": ""
-            },
-            {
-                "STT": 2,
-                "Cac Loai Chi Phi": "Phân hữu cơ",
-                "Don Vi Tinh": "kg",
-                "Don Gia (dong)": 3000,
-                "So Luong": 30,
-                "Ghi Chu": ""
-            },
-            {
-                "STT": 3,
-                "Cac Loai Chi Phi": "Phân NPK",
-                "Don Vi Tinh": "kg",
-                "Don Gia (dong)": 8000,
-                "So Luong": 10,
-                "Ghi Chu": ""
-            },
-            {
-                "STT": 4,
-                "Cac Loai Chi Phi": "Giàn làm từ tầm vông hoặc tre nứa",
-                "Don Vi Tinh": "m",
-                "Don Gia (dong)": 5000,
-                "So Luong": 10,
-                "Ghi Chu": "Tầm vông hoặc tre nứa dài khoảng 2-3 mét."
-            }
-        ]
+        "giongCay": "Giống cây trồng khổ qua (mướp đắng)",
+        "phuongThucTrong": "Trồng trong thùng xốp hoặc chậu, có giàn leo, đặt nơi có nhiều ánh sáng.",
+        "dienTichSoLuong": "Phù hợp với diện tích nhỏ như ban công hoặc sân thượng thành thị.",
+        "dieuKienSinhTruong": "Cây khổ qua cần đất tơi xốp, thoát nước tốt, ánh sáng đầy đủ và phải được tưới nước đều."
     },
+    "plantingPlan": [
+        {
+            "STT": "1. Chuẩn bị đất",
+            "Cong Viec Can Lam": "Làm đất tơi xốp, trộn với phân hữu cơ, phân chuồng để tăng dinh dưỡng cho đất.",
+            "Thoi Gian Thuc Hien": "Tháng 1",
+            "Vat Lieu, Dung Cu Can Thiet": "Đất vườn, phân hữu cơ, vôi bột",
+            "Ghi Chu": "Xới đất kỹ trước khi bón phân, phơi đất sau khi xử lý."
+        },
+        {
+            "STT": "2. Chuẩn bị giống",
+            "Cong Viec Can Lam": "Chọn hạt giống chất lượng cao, ngâm hạt giống trong nước ấm khoảng 24 giờ trước khi gieo.",
+            "Thoi Gian Thuc Hien": "Tháng 2",
+            "Vat Lieu, Dung Cu Can Thiet": "Hạt giống khổ qua, nước ấm",
+            "Ghi Chu": "Chọn hạt giống đồng đều về kích thước và không bị sâu bệnh."
+        },
+        {
+            "STT": "3. Gieo trồng",
+            "Cong Viec Can Lam": "Gieo hạt vào bầu ươm hoặc khay gieo hạt, giữ ẩm cho đất.",
+            "Thoi Gian Thuc Hien": "Tháng 2",
+            "Vat Lieu, Dung Cu Can Thiet": "Hạt giống khổ qua, bầu ươm, khay gieo hạt",
+            "Ghi Chu": "Đảm bảo khoảng cách gieo hạt phù hợp để cây có đủ không gian phát triển."
+        },
+        {
+            "STT": "4. Chăm sóc",
+            "Cong Viec Can Lam": "Tưới nước đều đặn, bón phân lần 1 vào gốc cây. Kiểm tra và loại bỏ cỏ dại, sâu bệnh.",
+            "Thoi Gian Thuc Hien": "Tháng 3 và thường xuyên",
+            "Vat Lieu, Dung Cu Can Thiet": "Phân bón NPK, nước tưới, thuốc trừ sâu",
+            "Ghi Chu": "Bón phân cách gốc 5cm, tưới nước vào buổi sáng hoặc chiều."
+        },
+        {
+            "STT": "5. Thu hoạch",
+            "Cong Viec Can Lam": "Thu hoạch khi quả khổ qua đạt kích thước vừa phải, có màu xanh đậm.",
+            "Thoi Gian Thuc Hien": "Tháng 6",
+            "Vat Lieu, Dung Cu Can Thiet": "Dao, kéo",
+            "Ghi Chu": "Thu hoạch vào buổi sáng hoặc chiều để đảm bảo độ tươi ngon của quả."
+        }
+    ],
+    "costEstimate": [
+        {
+            "STT": 1,
+            "Cac Loai Chi Phi": "Giống khổ qua",
+            "Don Vi Tinh": "gói",
+            "Don Gia (dong)": 15000,
+            "So Luong": 2,
+            "Ghi Chu": ""
+        },
+        {
+            "STT": 2,
+            "Cac Loai Chi Phi": "Phân hữu cơ",
+            "Don Vi Tinh": "kg",
+            "Don Gia (dong)": 3000,
+            "So Luong": 30,
+            "Ghi Chu": ""
+        },
+        {
+            "STT": 3,
+            "Cac Loai Chi Phi": "Phân NPK",
+            "Don Vi Tinh": "kg",
+            "Don Gia (dong)": 8000,
+            "So Luong": 10,
+            "Ghi Chu": ""
+        },
+        {
+            "STT": 4,
+            "Cac Loai Chi Phi": "Giàn leo làm từ tầm vông hoặc tre nứa",
+            "Don Vi Tinh": "m",
+            "Don Gia (dong)": 5000,
+            "So Luong": 10,
+            "Ghi Chu": "Tầm vông hoặc tre nứa dài khoảng 2-3 mét."
+        }
+    ]
+},
     {
         "nongsan": "trái bầu",
         "gioiThieu": {
